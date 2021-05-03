@@ -30,7 +30,7 @@ function MyLinkGroup(props) {
 }
 function MyLink(props) {
     let d = props.desc;
-    if (d != undefined) d = `- ${d}`;
+    if (d !== undefined) d = `- ${d}`;
     return (
         <li><a href={props.url}>{props.name}</a>{d}</li>
     );
@@ -41,11 +41,11 @@ function MyMenu(props) {
     let headers = [];
     let body = [];
 
-    props.menu.menu.map((x, i) => {
-        let selected = (i == displayTab) ? 'Y' : 'N';
+    props.menu.menu.foreach((x, i) => {
+        let selected = (i === displayTab) ? 'Y' : 'N';
         headers.push(<MyMenuHeader id={i} name={x.name} selected={selected} onClick={() => setDisplayTab(i)}></MyMenuHeader>);
-        if (i == displayTab) {
-            x.menu.map((x, i) => {
+        if (i === displayTab) {
+            x.menu.foreach((x, i) => {
                 body.push(<MyMenuGroup>{x.name}</MyMenuGroup>);
                 let y = x.menu.map((x, i) => {
                     return <MyLink url={x.url} desc={x.desc} name={x.name} />
