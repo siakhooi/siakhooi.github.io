@@ -1,0 +1,26 @@
+div#head {
+  width: 100%;
+}
+div#banner {
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+
+div#poweredby {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+div#poweredby span {
+  vertical-align: bottom;
+}
+div#poweredby img {
+  height: 40px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
