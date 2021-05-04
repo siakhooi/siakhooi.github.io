@@ -41,11 +41,11 @@ function MyMenu(props) {
     let headers = [];
     let body = [];
 
-    props.menu.menu.foreach((x, i) => {
+    props.menu.menu.forEach((x, i) => {
         let selected = (i === displayTab) ? 'Y' : 'N';
         headers.push(<MyMenuHeader id={i} name={x.name} selected={selected} onClick={() => setDisplayTab(i)}></MyMenuHeader>);
         if (i === displayTab) {
-            x.menu.foreach((x, i) => {
+            x.menu.forEach((x, i) => {
                 body.push(<MyMenuGroup>{x.name}</MyMenuGroup>);
                 let y = x.menu.map((x, i) => {
                     return <MyLink url={x.url} desc={x.desc} name={x.name} />
