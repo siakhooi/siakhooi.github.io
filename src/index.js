@@ -1,5 +1,5 @@
-import './index.css';
-import './MyMenu.css';
+import './index.scss';
+import './MyMenu.scss';
 
 import { renderMyMenu } from './MyMenu.js';
 

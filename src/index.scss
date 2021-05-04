@@ -1,0 +1,36 @@
+@import "w3";
+@import "w3-theme";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+div.MyPageHeader {
+  @extend .w3-container;
+  width: 100%;
+}
+h1.MyPageHeader {
+  @extend .w3-theme-d5;
+}
+
+div.PageBanner {
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+div.PagePoweredBy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+div.PagePoweredBy span {
+  vertical-align: bottom;
+}
+
+div.PagePoweredBy img {
+  height: 30px;
+}
+

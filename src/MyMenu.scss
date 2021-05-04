@@ -1,0 +1,35 @@
+@import "w3";
+@import "w3-theme";
+
+div.MyMenuBody {
+  @extend .w3-container;
+}
+div.MyLinkGroup {
+  column-count: 4;
+  column-fill: balance;
+}
+
+ul.MyLinkGroup {
+  margin: 0;
+}
+
+// li.MyLink { }
+// a.MyLink { }
+
+h2.MyMenuGroup {
+  @extend .w3-bar;
+  @extend .w3-theme;
+}
+
+div.MyMenuHeaders {
+  @extend .w3-container;
+  @extend .w3-theme-d3;
+}
+button.MyMenuHeader {
+  @extend .w3-bar-item;
+  @extend .w3-button;
+}
+button.MyMenuHeader[currentTab="Y"] {
+  @extend .w3-theme;
+}
+// button.MyMenuHeader[currentTab="N"] {}
