@@ -4,17 +4,24 @@ import ReactDOM from 'react-dom';
 
 function MyMenuBody(props) {
     return (
-        <div class="MyMenuBody">
-            {props.children}
-        </div>
+        <div class="MyMenuBody">{props.children}</div>
     );
 }
 function MyMenuGroup(props) {
     return (
-        <h2 class="MyMenuGroup">{props.children}</h2>
+        <div class="MyMenuGroup">{props.children}</div>
     );
 }
-
+function MyMenuGroupCard(props) {
+    return (
+        <div class="MyMenuGroupCard">{props.children}</div>
+    );
+}
+function MyMenuGroupHeader(props) {
+    return (
+        <h2 class="MyMenuGroupHeader">{props.children}</h2>
+    );
+}
 function MyMenuHeaders(props) {
     return (
         <div class="MyMenuHeaders">{props.children}</div>
@@ -50,18 +57,24 @@ function MyMenu(props) {
         headers.push(<MyMenuHeader id={i} name={x.name} selected={selected} onClick={() => setDisplayTab(i)}></MyMenuHeader>);
         if (i === displayTab) {
             x.menu.forEach((x, i) => {
-                body.push(<MyMenuGroup>{x.name}</MyMenuGroup>);
                 let y = x.menu.map((x, i) => {
-                    return <MyLink url={x.url} desc={x.desc} name={x.name} />
+                    return <MyLink url={x.url} desc={x.description} name={x.name} />
                 });
-                body.push(<MyLinkGroup>{y}</MyLinkGroup>);
+                body.push(
+                    <MyMenuGroup>
+                        <MyMenuGroupCard>
+                            <MyMenuGroupHeader>{x.name}</MyMenuGroupHeader>
+                            <MyLinkGroup>{y}</MyLinkGroup>
+                        </MyMenuGroupCard>
+                    </MyMenuGroup>
+                );
             });
         }
     });
-    return <>
+    return <div class="MyMenu">
         <MyMenuHeaders>{headers}</MyMenuHeaders>
         <MyMenuBody>{body}</MyMenuBody>
-    </>;
+    </div>;
 }
 function renderMenu(menu, id) {
     return new Promise((resolve, reject) => {

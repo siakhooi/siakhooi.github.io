@@ -1,26 +1,9 @@
 @import "w3";
 @import "w3-theme";
 
-div.MyMenuBody {
+div.MyMenu {
   @extend .w3-container;
 }
-div.MyLinkGroup {
-  column-count: 4;
-  column-fill: balance;
-}
-
-ul.MyLinkGroup {
-  margin: 0;
-}
-
-// li.MyLink { }
-// a.MyLink { }
-
-h2.MyMenuGroup {
-  @extend .w3-bar;
-  @extend .w3-theme;
-}
-
 div.MyMenuHeaders {
   @extend .w3-container;
   @extend .w3-theme-d3;
@@ -32,4 +15,42 @@ button.MyMenuHeader {
 button.MyMenuHeader[currentTab="Y"] {
   @extend .w3-theme;
 }
-// button.MyMenuHeader[currentTab="N"] {}
+
+div.MyMenuBody {
+  @extend .w3-container;
+  margin: 0px;
+}
+div.MyMenuGroup {
+  transition: 0.3s;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 864px) and (min-width: 576px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 1152px) and (min-width: 864px) {
+    width: 33%;
+  }
+  @media screen and (max-width: 1440px) and (min-width: 1152px) {
+    width: 25%;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 20%;
+  }
+}
+div.MyMenuGroupCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+h2.MyMenuGroupHeader {
+  @extend .w3-bar;
+  @extend .w3-theme;
+}
+//div.MyLinkGroup {}
+//ul.MyLinkGroup {}
+//li.MyLink { }
+//a.MyLink { }

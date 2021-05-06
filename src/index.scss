@@ -21,9 +21,11 @@ div.PageBanner {
   position: relative;
 }
 div.PagePoweredBy {
+  @extend .w3-container;
   position: absolute;
   bottom: 0;
   right: 0;
+  text-align: right;
 }
 
 div.PagePoweredBy span {
