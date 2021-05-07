@@ -8,5 +8,5 @@
 ```bash
 npx create-react-app siakhooi.github.io
 npm install gh-pages --save-dev
-npm install node-sass --save
+npm install sass --save-dev
 ```

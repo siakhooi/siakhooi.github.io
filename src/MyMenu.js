@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-
 function MyMenuBody(props) {
     return (
         <div class="MyMenuBody">{props.children}</div>
@@ -22,9 +21,45 @@ function MyMenuGroupHeader(props) {
         <h2 class="MyMenuGroupHeader">{props.children}</h2>
     );
 }
-function MyMenuHeaders(props) {
+function MyMenuBars(props) {
     return (
-        <div class="MyMenuHeaders">{props.children}</div>
+        <button class="MyMenuBars fa fa-bars" onClick={() => props.onClick()} />
+    );
+}
+function MyMenuTitle(props) {
+    return (
+        <span class="MyMenuTitle">{props.title}</span>
+    );
+}
+function MyMenuResponsiveNav(props) {
+    return (
+        <div class="MyMenuResponsiveNav">
+            <MyMenuTitle title={props.title} />
+            <MyMenuBars onClick={props.onClick} />
+        </div>
+    );
+}
+function MyMenuNav(props) {
+    return (
+        <div class="MyMenuNav" displayNav={props.displayNav}>{props.children}</div>
+    );
+}
+function MyMenuHeaders(props) {
+    const [displayNav, setDisplayNav] = useState(0);
+
+    let title;
+    let headers = props.o.map((x, i) => {
+        let selected = (i === props.displayTab) ? 'Y' : 'N';
+        if (i === props.displayTab) title = x;
+        return (
+            <MyMenuHeader id={i} name={x} selected={selected} onClick={() => { props.setDisplayTab(i); setDisplayNav(0); }}></MyMenuHeader>
+        );
+    });
+    return (
+        <div class="MyMenuHeaders">
+            <MyMenuResponsiveNav title={title} onClick={() => setDisplayNav((displayNav === 1 ? 0 : 1))} />
+            <MyMenuNav displayNav={displayNav === 1 ? 'Y' : 'N'}>{headers}</MyMenuNav>
+        </div>
     );
 }
 function MyMenuHeader(props) {
@@ -49,12 +84,9 @@ function MyLink(props) {
 
 function MyMenu(props) {
     const [displayTab, setDisplayTab] = useState(0);
-    let headers = [];
     let body = [];
 
-    props.menu.menu.forEach((x, i) => {
-        let selected = (i === displayTab) ? 'Y' : 'N';
-        headers.push(<MyMenuHeader id={i} name={x.name} selected={selected} onClick={() => setDisplayTab(i)}></MyMenuHeader>);
+    let headers = props.menu.menu.map((x, i) => {
         if (i === displayTab) {
             x.menu.forEach((x, i) => {
                 let y = x.menu.map((x, i) => {
@@ -70,9 +102,10 @@ function MyMenu(props) {
                 );
             });
         }
+        return x.name;
     });
     return <div class="MyMenu">
-        <MyMenuHeaders>{headers}</MyMenuHeaders>
+        <MyMenuHeaders displayTab={displayTab} o={headers} setDisplayTab={setDisplayTab} />
         <MyMenuBody>{body}</MyMenuBody>
     </div>;
 }

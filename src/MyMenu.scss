@@ -50,6 +50,46 @@ h2.MyMenuGroupHeader {
   @extend .w3-bar;
   @extend .w3-theme;
 }
+div.MyMenuNav {
+  @extend .w3-bar;
+  @media screen and (min-width: 864px) {
+    display: block;
+  }
+}
+div.MyMenuNav[displayNav="Y"] {
+  @media screen and (max-width: 864px) {
+    display: block;
+  }
+}
+div.MyMenuNav[displayNav="N"] {
+  @media screen and (max-width: 864px) {
+    display: none;
+  }
+}
+div.MyMenuResponsiveNav {
+  @media screen and (max-width: 864px) {
+    display: block;
+  }
+  @media screen and (min-width: 864px) {
+    display: none;
+  }
+}
+span.MyMenuTitle {
+  @extend .w3-bar-item;
+  @extend .w3-btn;
+}
+span.MyMenuTitle:hover {
+  box-shadow: none;
+  cursor: default;
+}
+
+.MyMenuBars {
+  @extend .w3-bar-item;
+  @extend .w3-btn;
+  float: right;
+  cursor: pointer;
+}
+
 //div.MyLinkGroup {}
 //ul.MyLinkGroup {}
 //li.MyLink { }
