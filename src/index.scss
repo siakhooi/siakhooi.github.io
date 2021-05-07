@@ -13,6 +13,12 @@ div.MyPageHeader {
 }
 h1.MyPageHeader {
   @extend .w3-theme-d5;
+  @media screen and (max-width: 300px) {
+    font-size: larger;
+  }
+  @media screen and (max-width: 420px) and (min-width: 300px) {
+    font-size: x-large;
+  }
 }
 
 div.PageBanner {
