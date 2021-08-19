@@ -1,0 +1,369 @@
+{
+  "menu": [
+    {
+      "name": "General",
+      "menu": [
+        {
+          "name": "References",
+          "menu": [
+            {
+              "name": "OpenSource.org/Licenses",
+              "url": "https://opensource.org/licenses/alphabetical"
+            },
+            {
+              "name": "SPDX.org/Licenses",
+              "url": "https://spdx.org/licenses/"
+            },
+            {
+              "name": "Semantic Versioning 2.0.0",
+              "url": "https://semver.org"
+            },
+            {
+              "name": "KeepAChangeLog.com",
+              "url": "https://keepachangelog.com"
+            },
+            {
+              "name": "AgileManifesto.org",
+              "url": "https://agilemanifesto.org"
+            }
+          ]
+        },
+        {
+          "name": "IDE",
+          "menu": [
+            {
+              "name": "VS Code",
+              "url": "https://code.visualstudio.com"
+            },
+            {
+              "name": "VSCodeThemes.com",
+              "url": "https://vscodethemes.com"
+            },
+            {
+              "name": "Notepad++",
+              "url": "https://notepad-plus-plus.org"
+            }
+          ]
+        },
+        {
+          "name": "Rest Tools",
+          "menu": [
+            {
+              "name": "Insomnia",
+              "url": "https://insomnia.rest"
+            },
+            {
+              "name": "Postman",
+              "url": "https://www.postman.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Web",
+      "menu": [
+        {
+          "name": "CSS",
+          "menu": [
+            {
+              "name": "W3.CSS",
+              "url": "https://www.w3schools.com/w3css/default.asp"
+            },
+            {
+              "name": "Bootstrap",
+              "url": "https://getbootstrap.com"
+            },
+            {
+              "name": "sass-lang.com",
+              "url": "https://sass-lang.com"
+            },
+            {
+              "name": "sass (npm)",
+              "url": "https://www.npmjs.com/package/sass"
+            }
+          ]
+        },
+        {
+          "name": "Fonts",
+          "menu": [
+            {
+              "name": "Google Fonts",
+              "url": "https://fonts.google.com"
+            },
+            {
+              "name": "FontSpace.com",
+              "url": "https://www.fontspace.com"
+            },
+            {
+              "name": "1001Fonts.com",
+              "url": "https://1001fonts.com"
+            },
+            {
+              "name": "FontSquirrel.com",
+              "url": "https://fontsquirrel.com"
+            }
+          ]
+        },
+        {
+          "name": "Icons",
+          "menu": [
+            {
+              "name": "FontAwesome.com",
+              "url": "https://fontawesome.com"
+            },
+            {
+              "name": "Bootstrap Icons",
+              "url": "https://icons.getbootstrap.com/"
+            },
+            {
+              "name": "Material Icons",
+              "url": "https://fonts.google.com/icons"
+            }
+          ]
+        },
+        {
+          "name": "Color Palettes",
+          "menu": [
+            {
+              "name": "Paletton.com",
+              "url": "https://paletton.com"
+            },
+            {
+              "name": "color-hex.com",
+              "url": "https://color-hex.com"
+            },
+            {
+              "name": "mycolor.space",
+              "url": "https://mycolor.space"
+            },
+            {
+              "name": "Coolors.co",
+              "url": "https://coolors.co"
+            },
+            {
+              "name": "ColorHunt.co",
+              "url": "https://colorhunt.co"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Java Script",
+      "menu": [
+        {
+          "name": "NodeJS",
+          "menu": [
+            {
+              "name": "nodejs.org",
+              "url": "https://nodejs.org"
+            },
+            {
+              "name": "npmjs.com",
+              "url": "https://www.npmjs.com"
+            },
+            {
+              "name": "semver calculator",
+              "url": "https://semver.npmjs.com"
+            },
+            {
+              "name": "npms.io",
+              "url": "https://npms.io"
+            }
+          ]
+        },
+        {
+          "name": "ReactJS",
+          "menu": [
+            {
+              "name": "reactjs.org",
+              "url": "https://reactjs.org"
+            },
+            {
+              "name": "create-react-app.dev",
+              "url": "https://create-react-app.dev"
+            },
+            {
+              "name": "react-responsive (npm)",
+              "url": "https://www.npmjs.com/package/react-responsive"
+            },
+            {
+              "name": "react-icons (npm)",
+              "url": "https://github.com/react-icons/react-icons"
+            },
+            {
+              "name": "react-test-renderer (npm)",
+              "url": "https://www.npmjs.com/package/react-test-renderer"
+            },
+            {
+              "name": "react prop-types (npm)",
+              "url": "https://www.npmjs.com/package/prop-types"
+            }
+          ]
+        },
+        {
+          "name": "JS Quality",
+          "menu": [
+            {
+              "name": "JestJs.io",
+              "url": "https://jestjs.io"
+            },
+            {
+              "name": "ESLint.org",
+              "url": "https://eslint.org"
+            },
+            {
+              "name": "JSLint.com",
+              "url": "https://www.jslint.com"
+            },
+            {
+              "name": "JSHint.com",
+              "url": "https://jshint.com"
+            }
+          ]
+        },
+        {
+          "name": "JavaScript",
+          "menu": [
+            {
+              "name": "angular.io",
+              "url": "https://angular.io"
+            },
+            {
+              "name": "angularjs.org",
+              "url": "https://angularjs.org"
+            },
+            {
+              "name": "VueJs.org",
+              "url": "https://vuejs.org"
+            },
+            {
+              "name": "ExpressJs.com",
+              "url": "https://expressjs.com"
+            },
+            {
+              "name": "BabelJs.io",
+              "url": "https://babeljs.io"
+            },
+            {
+              "name": "Axios (HTTP Client)",
+              "url": "https://axios-http.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "menu": [
+        {
+          "name": "Repos",
+          "menu": [
+            {
+              "name": "GitHub.com",
+              "url": "https://github.com"
+            },
+            {
+              "name": "Gitlab.com",
+              "url": "https://gitlab.com"
+            },
+            {
+              "name": "BitBucket.org",
+              "url": "https://bitbucket.org"
+            },
+            {
+              "name": "SourceForge.net",
+              "url": "https://sourceforge.net"
+            },
+            {
+              "name": "Git Extensions",
+              "url": "https://gitextensions.github.io"
+            },
+            {
+              "name": "badge.fury.io",
+              "url": "https://badge.fury.io",
+              "description": "badges"
+            },
+            {
+              "name": "shields.io",
+              "url": "https://shields.io",
+              "description": "badges"
+            },
+            {
+              "name": "ChooseALicense.com",
+              "url": "https://choosealicense.com"
+            },
+            {
+              "name": "spdx.org/licenses/",
+              "url": "https://spdx.org/licenses/"
+            }
+          ]
+        },
+        {
+          "name": "Containers",
+          "menu": [
+            {
+              "name": "docker.com",
+              "url": "https://docker.com"
+            },
+            {
+              "name": "kubernetes.io",
+              "url": "https://kubernetes.io"
+            }
+          ]
+        },
+        {
+          "name": "Cloud Providers",
+          "menu": [
+            {
+              "name": "GCP",
+              "url": "https://cloud.google.com"
+            },
+            {
+              "name": "Azure",
+              "url": "https://azure.microsoft.com"
+            },
+            {
+              "name": "AWS",
+              "url": "https://aws.amazon.com"
+            },
+            {
+              "name": "Oracle Cloud",
+              "url": "https://www.oracle.com/cloud/"
+            }
+          ]
+        },
+        {
+          "name": "Linux",
+          "menu": [
+            {
+              "name": "Ubuntu.com",
+              "url": "https://ubuntu.com"
+            },
+            {
+              "name": "getFedora.org",
+              "url": "https://getfedora.org"
+            },
+            {
+              "name": "Kernel.org",
+              "url": "https://www.kernel.org"
+            },
+            {
+              "name": "Linux.org",
+              "url": "https://www.linux.org"
+            },
+            {
+              "name": "GNU.org",
+              "url": "https://www.gnu.org"
+            },
+            {
+              "name": "Apache.org",
+              "url": "https://www.apache.org"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

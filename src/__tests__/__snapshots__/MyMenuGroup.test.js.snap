@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMenuGroup/1 1`] = `
+<div
+  className="MyMenuGroup"
+>
+  <div>
+    ABC
+  </div>
+</div>
+`;

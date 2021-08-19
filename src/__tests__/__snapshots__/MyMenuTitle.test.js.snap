@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMenuTitle/1 1`] = `
+<span
+  className="MyMenuTitle"
+>
+  Data Science
+</span>
+`;
