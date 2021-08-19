@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMenuResponsiveNav/1 1`] = `
+<div
+  className="MyMenuResponsiveNav"
+>
+  <span
+    className="MyMenuTitle"
+  >
+    Hello World
+  </span>
+  <button
+    className="MyMenuBars fa fa-bars"
+    onClick={[Function]}
+  />
+</div>
+`;

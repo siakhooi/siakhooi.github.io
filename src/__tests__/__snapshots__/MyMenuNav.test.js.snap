@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMenuNav/N 1`] = `
+<div
+  className="MyMenuNav"
+  displayNav="N"
+>
+  <div>
+    ABC
+  </div>
+  <div>
+    ABC
+  </div>
+</div>
+`;
+
+exports[`MyMenuNav/Y 1`] = `
+<div
+  className="MyMenuNav"
+  displayNav="Y"
+>
+  <div>
+    ABC
+  </div>
+  <div>
+    ABC
+  </div>
+</div>
+`;

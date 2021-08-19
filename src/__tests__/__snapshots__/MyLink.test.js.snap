@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyLink/1 1`] = `
+<li
+  className="MyLink"
+>
+  <a
+    className="MyLink"
+    href="http://www.google.com"
+    rel="nofollow"
+  >
+    Google
+  </a>
+</li>
+`;
+
+exports[`MyLink/2 1`] = `
+<li
+  className="MyLink"
+>
+  <a
+    className="MyLink"
+    href="http://www.google.com"
+    rel="nofollow"
+  >
+    Google
+  </a>
+  - Search Engine
+</li>
+`;

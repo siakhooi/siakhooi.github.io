@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMenuHeader/1 1`] = `
+<button
+  className="MyMenuHeader"
+  currentTab="Y"
+  onClick={[MockFunction]}
+>
+  Hello World
+</button>
+`;
