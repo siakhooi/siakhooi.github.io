@@ -11,6 +11,7 @@
 ![Coveralls](https://img.shields.io/coveralls/github/siakhooi/siakhooi.github.io)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/siakhooi/siakhooi.github.io/Build%20and%20Deploy)
 ![deploy](https://github.com/siakhooi/siakhooi.github.io/actions/workflows/gh-pages.yml/badge.svg)
+![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-siakhooi.github.io)
 
 ## Locations
 
