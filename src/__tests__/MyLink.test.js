@@ -1,28 +1,32 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render, screen } from '@testing-library/react'
 import MyLink from '../MyLink'
 
 it('MyLink/1', () => {
-  const component =
-    renderer.create(
-      <MyLink
-        url={'http://www.google.com'}
-        name={'Google'}
-      />
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyLink
+      url={'http://www.google.com'}
+      name={'Google'}
+    />
+  )
+  const link = screen.getByRole('link', { name: 'Google' })
+  expect(link).toHaveAttribute('href', 'http://www.google.com')
+  expect(link).toHaveAttribute('rel', 'nofollow')
+  expect(container.firstChild).toMatchSnapshot()
 })
 
 it('MyLink/2', () => {
-  const component =
-    renderer.create(
-      <MyLink
-        url={'http://www.google.com'}
-        name={'Google'}
-        desc={'Search Engine'}
-      />
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyLink
+      url={'http://www.google.com'}
+      name={'Google'}
+      desc={'Search Engine'}
+    />
+  )
+  const link = screen.getByRole('link', { name: 'Google' })
+  expect(link).toHaveAttribute('href', 'http://www.google.com')
+  expect(link).toHaveAttribute('rel', 'nofollow')
+  // desc is rendered as text after the link
+  expect(container.firstChild).toHaveTextContent('Google- Search Engine')
+  expect(container.firstChild).toMatchSnapshot()
 })

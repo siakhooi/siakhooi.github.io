@@ -2,10 +2,10 @@
 
 exports[`MyLink/1 1`] = `
 <li
-  className="MyLink"
+  class="MyLink"
 >
   <a
-    className="MyLink"
+    class="MyLink"
     href="http://www.google.com"
     rel="nofollow"
   >
@@ -16,10 +16,10 @@ exports[`MyLink/1 1`] = `
 
 exports[`MyLink/2 1`] = `
 <li
-  className="MyLink"
+  class="MyLink"
 >
   <a
-    className="MyLink"
+    class="MyLink"
     href="http://www.google.com"
     rel="nofollow"
   >

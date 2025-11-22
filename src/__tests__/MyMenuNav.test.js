@@ -1,21 +1,23 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import MyMenuNav from '../MyMenuNav'
 
 it('MyMenuNav/Y', () => {
-  const component =
-    renderer.create(
-      <MyMenuNav displayNav='Y'><div>ABC</div><div>ABC</div></MyMenuNav>
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuNav displayNav='Y'><div>ABC</div><div>ABC</div></MyMenuNav>
+  )
+  const nav = container.querySelector('.MyMenuNav')
+  expect(nav).toBeInTheDocument()
+  expect(nav).toHaveAttribute('displaynav', 'Y')
+  expect(container.firstChild).toMatchSnapshot()
 })
 
 it('MyMenuNav/N', () => {
-  const component =
-    renderer.create(
-      <MyMenuNav displayNav='N'><div>ABC</div><div>ABC</div></MyMenuNav>
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuNav displayNav='N'><div>ABC</div><div>ABC</div></MyMenuNav>
+  )
+  const nav = container.querySelector('.MyMenuNav')
+  expect(nav).toBeInTheDocument()
+  expect(nav).toHaveAttribute('displaynav', 'N')
+  expect(container.firstChild).toMatchSnapshot()
 })

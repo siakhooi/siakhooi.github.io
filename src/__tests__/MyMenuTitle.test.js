@@ -1,14 +1,14 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import MyMenuTitle from '../MyMenuTitle'
 
 it('MyMenuTitle/1', () => {
-  const component =
-    renderer.create(
-      <MyMenuTitle
-        title={'Data Science'}
-      />
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuTitle
+      title={'Data Science'}
+    />
+  )
+  const span = container.querySelector('.MyMenuTitle')
+  expect(span).toHaveTextContent('Data Science')
+  expect(container.firstChild).toMatchSnapshot()
 })

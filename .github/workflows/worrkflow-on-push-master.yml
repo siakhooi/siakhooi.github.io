@@ -1,23 +1,27 @@
-name: test (non-master branch)
+name: Test
 on:
   push:
     branches:
-      - "*"
-      - "!master"
+      - master
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
       - run: npm install
+      - run: npx eslint .
       - run: . .github/workflows/fix-coverage-directories.sh
       - run: npm test
       - uses: actions/upload-artifact@v5
         with:
           name: coverage-report
           path: coverage
+      - run: npm run build
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

@@ -2,7 +2,7 @@
 
 exports[`MyMenuTitle/1 1`] = `
 <span
-  className="MyMenuTitle"
+  class="MyMenuTitle"
 >
   Data Science
 </span>

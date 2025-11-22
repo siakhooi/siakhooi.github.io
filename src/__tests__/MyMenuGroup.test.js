@@ -1,12 +1,13 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import MyMenuGroup from '../MyMenuGroup'
 
 it('MyMenuGroup/1', () => {
-  const component =
-    renderer.create(
-      <MyMenuGroup><div>ABC</div></MyMenuGroup>
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuGroup><div>ABC</div></MyMenuGroup>
+  )
+  const group = container.querySelector('.MyMenuGroup')
+  expect(group).toBeInTheDocument()
+  expect(group.querySelector('div')).toHaveTextContent('ABC')
+  expect(container.firstChild).toMatchSnapshot()
 })

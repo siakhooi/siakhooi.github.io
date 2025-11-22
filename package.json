@@ -4,28 +4,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^3.3.2"
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test --watchAll=false --coverage",
     "eslint": "npx eslint --format table .",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -41,15 +35,12 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint": "^8.0.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0",
-    "react-test-renderer": "^18.2.0",
-    "sass": "^1.63.4"
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "gh-pages": "^6.3.0",
+    "globals": "^15.14.0",
+    "sass": "^1.94.2"
   },
   "jest": {
     "coveragePathIgnorePatterns": [

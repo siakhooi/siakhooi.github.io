@@ -2,8 +2,8 @@
 
 exports[`MyMenuNav/N 1`] = `
 <div
-  className="MyMenuNav"
-  displayNav="N"
+  class="MyMenuNav"
+  displaynav="N"
 >
   <div>
     ABC
@@ -16,8 +16,8 @@ exports[`MyMenuNav/N 1`] = `
 
 exports[`MyMenuNav/Y 1`] = `
 <div
-  className="MyMenuNav"
-  displayNav="Y"
+  class="MyMenuNav"
+  displaynav="Y"
 >
   <div>
     ABC

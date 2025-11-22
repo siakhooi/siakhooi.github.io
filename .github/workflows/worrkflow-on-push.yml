@@ -1,24 +1,22 @@
-name: Coverage Report
+name: Test
 on:
   push:
     branches:
-      - master
-
+      - "*"
+      - "!master"
 jobs:
-  test:
-    name: Coveralls
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
       - run: npm install
+      - run: npx eslint .
       - run: . .github/workflows/fix-coverage-directories.sh
       - run: npm test
-      - uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v5
         with:
           name: coverage-report

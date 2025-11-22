@@ -2,83 +2,78 @@
 
 exports[`MyMenu/1 1`] = `
 <div
-  className="MyMenu"
+  class="MyMenu"
 >
   <div
-    className="MyMenuHeaders"
+    class="MyMenuHeaders"
   >
     <div
-      className="MyMenuResponsiveNav"
+      class="MyMenuResponsiveNav"
     >
       <span
-        className="MyMenuTitle"
+        class="MyMenuTitle"
       >
         General
       </span>
       <button
-        className="MyMenuBars fa fa-bars"
-        onClick={[Function]}
+        class="MyMenuBars fa fa-bars"
       />
     </div>
     <div
-      className="MyMenuNav"
-      displayNav="N"
+      class="MyMenuNav"
+      displaynav="N"
     >
       <button
-        className="MyMenuHeader"
-        currentTab="Y"
-        onClick={[Function]}
+        class="MyMenuHeader"
+        currenttab="Y"
       >
         General
       </button>
       <button
-        className="MyMenuHeader"
-        currentTab="N"
-        onClick={[Function]}
+        class="MyMenuHeader"
+        currenttab="N"
       >
         Web
       </button>
       <button
-        className="MyMenuHeader"
-        currentTab="N"
-        onClick={[Function]}
+        class="MyMenuHeader"
+        currenttab="N"
       >
         Java Script
       </button>
       <button
-        className="MyMenuHeader"
-        currentTab="N"
-        onClick={[Function]}
+        class="MyMenuHeader"
+        currenttab="N"
       >
         Cloud
       </button>
     </div>
   </div>
   <div
-    className="MyMenuBody"
+    class="MyMenuBody"
   >
     <div
-      className="MyMenuGroup"
+      class="MyMenuGroup"
     >
       <div
-        className="MyMenuGroupCard"
+        class="MyMenuGroupCard"
       >
         <h2
-          className="MyMenuGroupHeader"
+          class="MyMenuGroupHeader"
         >
           References
         </h2>
         <div
-          className="MyLinkGroup"
+          class="MyLinkGroup"
         >
           <ul
-            className="MyLinkGroup"
+            class="MyLinkGroup"
           >
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://opensource.org/licenses/alphabetical"
                 rel="nofollow"
               >
@@ -86,10 +81,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://spdx.org/licenses/"
                 rel="nofollow"
               >
@@ -97,10 +92,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://semver.org"
                 rel="nofollow"
               >
@@ -108,10 +103,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://keepachangelog.com"
                 rel="nofollow"
               >
@@ -119,10 +114,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://agilemanifesto.org"
                 rel="nofollow"
               >
@@ -134,27 +129,27 @@ exports[`MyMenu/1 1`] = `
       </div>
     </div>
     <div
-      className="MyMenuGroup"
+      class="MyMenuGroup"
     >
       <div
-        className="MyMenuGroupCard"
+        class="MyMenuGroupCard"
       >
         <h2
-          className="MyMenuGroupHeader"
+          class="MyMenuGroupHeader"
         >
           IDE
         </h2>
         <div
-          className="MyLinkGroup"
+          class="MyLinkGroup"
         >
           <ul
-            className="MyLinkGroup"
+            class="MyLinkGroup"
           >
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://code.visualstudio.com"
                 rel="nofollow"
               >
@@ -162,10 +157,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://vscodethemes.com"
                 rel="nofollow"
               >
@@ -173,10 +168,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://notepad-plus-plus.org"
                 rel="nofollow"
               >
@@ -188,27 +183,27 @@ exports[`MyMenu/1 1`] = `
       </div>
     </div>
     <div
-      className="MyMenuGroup"
+      class="MyMenuGroup"
     >
       <div
-        className="MyMenuGroupCard"
+        class="MyMenuGroupCard"
       >
         <h2
-          className="MyMenuGroupHeader"
+          class="MyMenuGroupHeader"
         >
           Rest Tools
         </h2>
         <div
-          className="MyLinkGroup"
+          class="MyLinkGroup"
         >
           <ul
-            className="MyLinkGroup"
+            class="MyLinkGroup"
           >
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://insomnia.rest"
                 rel="nofollow"
               >
@@ -216,10 +211,10 @@ exports[`MyMenu/1 1`] = `
               </a>
             </li>
             <li
-              className="MyLink"
+              class="MyLink"
             >
               <a
-                className="MyLink"
+                class="MyLink"
                 href="https://www.postman.com"
                 rel="nofollow"
               >

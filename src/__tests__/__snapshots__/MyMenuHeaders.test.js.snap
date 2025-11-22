@@ -2,43 +2,39 @@
 
 exports[`MyMenuHeaders/1 1`] = `
 <div
-  className="MyMenuHeaders"
+  class="MyMenuHeaders"
 >
   <div
-    className="MyMenuResponsiveNav"
+    class="MyMenuResponsiveNav"
   >
     <span
-      className="MyMenuTitle"
+      class="MyMenuTitle"
     >
       Header 1
     </span>
     <button
-      className="MyMenuBars fa fa-bars"
-      onClick={[Function]}
+      class="MyMenuBars fa fa-bars"
     />
   </div>
   <div
-    className="MyMenuNav"
-    displayNav="N"
+    class="MyMenuNav"
+    displaynav="N"
   >
     <button
-      className="MyMenuHeader"
-      currentTab="Y"
-      onClick={[Function]}
+      class="MyMenuHeader"
+      currenttab="Y"
     >
       Header 1
     </button>
     <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
+      class="MyMenuHeader"
+      currenttab="N"
     >
       Header 2
     </button>
     <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
+      class="MyMenuHeader"
+      currenttab="N"
     >
       Header 3
     </button>
@@ -48,227 +44,39 @@ exports[`MyMenuHeaders/1 1`] = `
 
 exports[`MyMenuHeaders/2 1`] = `
 <div
-  className="MyMenuHeaders"
+  class="MyMenuHeaders"
 >
   <div
-    className="MyMenuResponsiveNav"
+    class="MyMenuResponsiveNav"
   >
     <span
-      className="MyMenuTitle"
+      class="MyMenuTitle"
     >
       Header 2
     </span>
     <button
-      className="MyMenuBars fa fa-bars"
-      onClick={[Function]}
+      class="MyMenuBars fa fa-bars"
     />
   </div>
   <div
-    className="MyMenuNav"
-    displayNav="N"
+    class="MyMenuNav"
+    displaynav="N"
   >
     <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
+      class="MyMenuHeader"
+      currenttab="N"
     >
       Header 1
     </button>
     <button
-      className="MyMenuHeader"
-      currentTab="Y"
-      onClick={[Function]}
+      class="MyMenuHeader"
+      currenttab="Y"
     >
       Header 2
     </button>
     <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 3
-    </button>
-  </div>
-</div>
-`;
-
-exports[`MyMenuHeaders/2 2`] = `
-<div
-  className="MyMenuHeaders"
->
-  <div
-    className="MyMenuResponsiveNav"
-  >
-    <span
-      className="MyMenuTitle"
-    >
-      Header 2
-    </span>
-    <button
-      className="MyMenuBars fa fa-bars"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="MyMenuNav"
-    displayNav="Y"
-  >
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 1
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="Y"
-      onClick={[Function]}
-    >
-      Header 2
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 3
-    </button>
-  </div>
-</div>
-`;
-
-exports[`MyMenuHeaders/2 3`] = `
-<div
-  className="MyMenuHeaders"
->
-  <div
-    className="MyMenuResponsiveNav"
-  >
-    <span
-      className="MyMenuTitle"
-    >
-      Header 2
-    </span>
-    <button
-      className="MyMenuBars fa fa-bars"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="MyMenuNav"
-    displayNav="N"
-  >
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 1
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="Y"
-      onClick={[Function]}
-    >
-      Header 2
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 3
-    </button>
-  </div>
-</div>
-`;
-
-exports[`MyMenuHeaders/2 4`] = `
-<div
-  className="MyMenuHeaders"
->
-  <div
-    className="MyMenuResponsiveNav"
-  >
-    <span
-      className="MyMenuTitle"
-    >
-      Header 2
-    </span>
-    <button
-      className="MyMenuBars fa fa-bars"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="MyMenuNav"
-    displayNav="N"
-  >
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 1
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="Y"
-      onClick={[Function]}
-    >
-      Header 2
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 3
-    </button>
-  </div>
-</div>
-`;
-
-exports[`MyMenuHeaders/2 5`] = `
-<div
-  className="MyMenuHeaders"
->
-  <div
-    className="MyMenuResponsiveNav"
-  >
-    <span
-      className="MyMenuTitle"
-    >
-      Header 2
-    </span>
-    <button
-      className="MyMenuBars fa fa-bars"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="MyMenuNav"
-    displayNav="N"
-  >
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
-    >
-      Header 1
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="Y"
-      onClick={[Function]}
-    >
-      Header 2
-    </button>
-    <button
-      className="MyMenuHeader"
-      currentTab="N"
-      onClick={[Function]}
+      class="MyMenuHeader"
+      currenttab="N"
     >
       Header 3
     </button>

@@ -1,19 +1,21 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import MyMenuResponsiveNav from '../MyMenuResponsiveNav'
 
-it('MyMenuResponsiveNav/1', () => {
+it('MyMenuResponsiveNav/1', async () => {
   const dummyFunction = jest.fn()
+  const user = userEvent.setup()
 
-  const component =
-    renderer.create(
-      <MyMenuResponsiveNav title='Hello World' onClick={dummyFunction} />
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuResponsiveNav title='Hello World' onClick={dummyFunction} />
+  )
 
-  tree
-    .children.find((x) => { return x.props.className.indexOf('MyMenuBars') !== -1 })
-    .props.onClick()
+  const nav = container.querySelector('.MyMenuResponsiveNav')
+  expect(nav).toBeInTheDocument()
+  expect(container.firstChild).toMatchSnapshot()
+
+  const button = screen.getByRole('button')
+  await user.click(button)
   expect(dummyFunction).toHaveBeenCalled()
 })

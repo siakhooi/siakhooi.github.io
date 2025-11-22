@@ -1,12 +1,13 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import MyLinkGroup from '../MyLinkGroup'
 
 it('MyLinkGroup/1', () => {
-  const component =
-    renderer.create(
-      <MyLinkGroup><li>hello</li><li>hello</li></MyLinkGroup>
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyLinkGroup><li>hello</li><li>hello</li></MyLinkGroup>
+  )
+  const ul = container.querySelector('.MyLinkGroup')
+  expect(ul).toBeInTheDocument()
+  expect(ul.querySelectorAll('li')).toHaveLength(2)
+  expect(container.firstChild).toMatchSnapshot()
 })

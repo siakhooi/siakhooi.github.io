@@ -2,7 +2,6 @@
 
 exports[`MyMenuBars/1 1`] = `
 <button
-  className="MyMenuBars fa fa-bars"
-  onClick={[Function]}
+  class="MyMenuBars fa fa-bars"
 />
 `;

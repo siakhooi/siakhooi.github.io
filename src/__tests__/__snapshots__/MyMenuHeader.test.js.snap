@@ -2,9 +2,8 @@
 
 exports[`MyMenuHeader/1 1`] = `
 <button
-  className="MyMenuHeader"
-  currentTab="Y"
-  onClick={[MockFunction]}
+  class="MyMenuHeader"
+  currenttab="Y"
 >
   Hello World
 </button>

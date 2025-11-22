@@ -1,12 +1,13 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render, screen } from '@testing-library/react'
 import MyMenuGroupHeader from '../MyMenuGroupHeader'
 
 it('MyMenuGroupHeader/1', () => {
-  const component =
-    renderer.create(
-      <MyMenuGroupHeader>Hello Data</MyMenuGroupHeader>
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuGroupHeader>Hello Data</MyMenuGroupHeader>
+  )
+  const header = screen.getByRole('heading', { level: 2 })
+  expect(header).toHaveTextContent('Hello Data')
+  expect(header).toHaveClass('MyMenuGroupHeader')
+  expect(container.firstChild).toMatchSnapshot()
 })

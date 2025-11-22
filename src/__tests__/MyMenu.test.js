@@ -1,15 +1,16 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import MyMenu from '../MyMenu'
 import fs from 'fs'
 
 it('MyMenu/1', () => {
   const menu = JSON.parse(fs.readFileSync('./src/__tests__/sample.json', { encoding: 'utf8' }))
 
-  const component =
-    renderer.create(
-      <MyMenu menu={menu} />
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenu menu={menu} />
+  )
+
+  const menuDiv = container.querySelector('.MyMenu')
+  expect(menuDiv).toBeInTheDocument()
+  expect(container.firstChild).toMatchSnapshot()
 })

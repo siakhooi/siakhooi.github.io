@@ -2,7 +2,7 @@
 
 exports[`MyMenuGroup/1 1`] = `
 <div
-  className="MyMenuGroup"
+  class="MyMenuGroup"
 >
   <div>
     ABC

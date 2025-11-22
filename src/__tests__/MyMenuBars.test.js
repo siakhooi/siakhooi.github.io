@@ -1,17 +1,20 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import MyMenuBars from '../MyMenuBars'
 
-it('MyMenuBars/1', () => {
+it('MyMenuBars/1', async () => {
   const dummyFunction = jest.fn()
+  const user = userEvent.setup()
 
-  const component =
-    renderer.create(
-      <MyMenuBars onClick={dummyFunction} />
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuBars onClick={dummyFunction} />
+  )
 
-  tree.props.onClick()
+  const button = screen.getByRole('button')
+  expect(button).toHaveClass('MyMenuBars', 'fa', 'fa-bars')
+  expect(container.firstChild).toMatchSnapshot()
+
+  await user.click(button)
   expect(dummyFunction).toHaveBeenCalled()
 })

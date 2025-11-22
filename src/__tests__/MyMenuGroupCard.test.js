@@ -1,12 +1,13 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import MyMenuGroupCard from '../MyMenuGroupCard'
 
 it('MyMenuGroupCard/1', () => {
-  const component =
-    renderer.create(
-      <MyMenuGroupCard><div>ABC</div><div>ABC</div></MyMenuGroupCard>
-    )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <MyMenuGroupCard><div>ABC</div><div>ABC</div></MyMenuGroupCard>
+  )
+  const card = container.querySelector('.MyMenuGroupCard')
+  expect(card).toBeInTheDocument()
+  expect(card.querySelectorAll('div')).toHaveLength(2)
+  expect(container.firstChild).toMatchSnapshot()
 })

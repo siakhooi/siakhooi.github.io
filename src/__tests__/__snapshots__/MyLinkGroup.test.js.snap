@@ -2,10 +2,10 @@
 
 exports[`MyLinkGroup/1 1`] = `
 <div
-  className="MyLinkGroup"
+  class="MyLinkGroup"
 >
   <ul
-    className="MyLinkGroup"
+    class="MyLinkGroup"
   >
     <li>
       hello
