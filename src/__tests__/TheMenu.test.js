@@ -32,15 +32,15 @@ describe('renderMyMenu', () => {
     createRoot.mockReturnValue(mockRoot)
 
     // Setup mock fetch
-    originalFetch = global.fetch
-    global.fetch = jest.fn()
+    originalFetch = globalThis.fetch
+    globalThis.fetch = jest.fn()
   })
 
   afterEach(() => {
     // Cleanup
     document.body.removeChild(mockContainer)
     jest.clearAllMocks()
-    global.fetch = originalFetch
+    globalThis.fetch = originalFetch
   })
 
   it('should fetch data from URL and render MyMenu component', async () => {
@@ -48,13 +48,13 @@ describe('renderMyMenu', () => {
     const mockResponse = {
       json: jest.fn().mockResolvedValue(mockMenu)
     }
-    global.fetch.mockResolvedValue(mockResponse)
+    globalThis.fetch.mockResolvedValue(mockResponse)
 
     await renderMyMenu('https://example.com/menu.json', 'test-container')
 
     // Verify fetch was called with correct URL
-    expect(global.fetch).toHaveBeenCalledWith('https://example.com/menu.json')
-    expect(global.fetch).toHaveBeenCalledTimes(1)
+    expect(globalThis.fetch).toHaveBeenCalledWith('https://example.com/menu.json')
+    expect(globalThis.fetch).toHaveBeenCalledTimes(1)
 
     // Verify response.json() was called
     expect(mockResponse.json).toHaveBeenCalledTimes(1)
@@ -72,13 +72,13 @@ describe('renderMyMenu', () => {
 
   it('should handle fetch error', async () => {
     const mockError = new Error('Network error')
-    global.fetch.mockRejectedValue(mockError)
+    globalThis.fetch.mockRejectedValue(mockError)
 
     await expect(renderMyMenu('https://example.com/menu.json', 'test-container'))
       .rejects.toThrow('Network error')
 
     // Verify fetch was called
-    expect(global.fetch).toHaveBeenCalledWith('https://example.com/menu.json')
+    expect(globalThis.fetch).toHaveBeenCalledWith('https://example.com/menu.json')
 
     // Verify createRoot and render were not called
     expect(createRoot).not.toHaveBeenCalled()
@@ -90,13 +90,13 @@ describe('renderMyMenu', () => {
     const mockResponse = {
       json: jest.fn().mockRejectedValue(mockError)
     }
-    global.fetch.mockResolvedValue(mockResponse)
+    globalThis.fetch.mockResolvedValue(mockResponse)
 
     await expect(renderMyMenu('https://example.com/menu.json', 'test-container'))
       .rejects.toThrow('Invalid JSON')
 
     // Verify fetch and json() were called
-    expect(global.fetch).toHaveBeenCalledWith('https://example.com/menu.json')
+    expect(globalThis.fetch).toHaveBeenCalledWith('https://example.com/menu.json')
     expect(mockResponse.json).toHaveBeenCalledTimes(1)
 
     // Verify createRoot and render were not called
@@ -115,7 +115,7 @@ describe('renderMyMenu', () => {
     const mockResponse = {
       json: jest.fn().mockResolvedValue(mockMenu)
     }
-    global.fetch.mockResolvedValue(mockResponse)
+    globalThis.fetch.mockResolvedValue(mockResponse)
 
     await renderMyMenu('https://example.com/api/menu', 'test-container')
 
@@ -134,7 +134,7 @@ describe('renderMyMenu', () => {
     const mockResponse = {
       json: jest.fn().mockResolvedValue(mockMenu)
     }
-    global.fetch.mockResolvedValue(mockResponse)
+    globalThis.fetch.mockResolvedValue(mockResponse)
 
     await renderMyMenu('https://example.com/menu.json', 'another-container')
 
@@ -149,7 +149,7 @@ describe('renderMyMenu', () => {
     const mockResponse = {
       json: jest.fn().mockResolvedValue(mockMenu)
     }
-    global.fetch.mockResolvedValue(mockResponse)
+    globalThis.fetch.mockResolvedValue(mockResponse)
 
     await renderMyMenu('https://example.com/menu.json', 'test-container')
 
