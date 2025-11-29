@@ -20,10 +20,10 @@ function MyMenu (props) {
     if (i === displayTab) {
       x.menu.forEach((x, i) => {
         const y = x.menu.map((x1, i1) => {
-          return <MyLink key={i1} url={x1.url} desc={x1.description} name={x1.name} />
+          return <MyLink key={`${x1.name}-${i1}`} url={x1.url} desc={x1.description} name={x1.name} />
         })
         body.push(
-          <MyMenuGroup key={i}>
+          <MyMenuGroup key={`${x.name}-${i}`}>
             <MyMenuGroupCard>
               <MyMenuGroupHeader>{x.name}</MyMenuGroupHeader>
               <MyLinkGroup>{y}</MyLinkGroup>

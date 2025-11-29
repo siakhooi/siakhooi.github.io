@@ -21,7 +21,7 @@ function MyMenuHeaders (props) {
       selected = 'Y'
     }
     return (
-      <MyMenuHeader key={i} id={i} name={x} selected={selected} onClick={() => { props.setDisplayTab(i); setDisplayNav(0) }}></MyMenuHeader>
+      <MyMenuHeader key={`${x}-${i}`} id={`${x}-${i}`} name={x} selected={selected} onClick={() => { props.setDisplayTab(i); setDisplayNav(0) }}></MyMenuHeader>
     )
   })
   return (

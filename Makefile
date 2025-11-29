@@ -16,3 +16,9 @@ test:
 build:
 	npm run build
 all: clean install lint test build
+
+w3-css:
+	curl -L -o src/w3-theme.css https://www.w3schools.com/lib/w3-theme-light-blue.css
+	curl -L -o src/w3.css https://www.w3schools.com/w3css/5/w3.css
+.PHONY: build
+
