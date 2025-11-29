@@ -21,29 +21,29 @@ exports[`MyMenu/1 1`] = `
     </div>
     <div
       class="MyMenuNav"
-      displaynav="N"
+      data-display-nav="N"
     >
       <button
         class="MyMenuHeader"
-        currenttab="Y"
+        data-current-tab="Y"
       >
         General
       </button>
       <button
         class="MyMenuHeader"
-        currenttab="N"
+        data-current-tab="N"
       >
         Web
       </button>
       <button
         class="MyMenuHeader"
-        currenttab="N"
+        data-current-tab="N"
       >
         Java Script
       </button>
       <button
         class="MyMenuHeader"
-        currenttab="N"
+        data-current-tab="N"
       >
         Cloud
       </button>

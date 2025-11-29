@@ -87,11 +87,11 @@ it('MyMenuHeaders/5 - should set correct selected attribute on active header', (
   const headerButtons = container.querySelectorAll('.MyMenuHeader')
 
   // First header should not be selected
-  expect(headerButtons[0].getAttribute('currentTab')).toBe('N')
+  expect(headerButtons[0].getAttribute('data-current-tab')).toBe('N')
   // Second header should be selected
-  expect(headerButtons[1].getAttribute('currentTab')).toBe('Y')
+  expect(headerButtons[1].getAttribute('data-current-tab')).toBe('Y')
   // Third header should not be selected
-  expect(headerButtons[2].getAttribute('currentTab')).toBe('N')
+  expect(headerButtons[2].getAttribute('data-current-tab')).toBe('N')
 })
 
 it('MyMenuHeaders/6 - should toggle displayNav when responsive nav is clicked', () => {
@@ -106,15 +106,15 @@ it('MyMenuHeaders/6 - should toggle displayNav when responsive nav is clicked', 
   const menuBars = container.querySelector('.MyMenuBars')
 
   // Initially displayNav should be 'N'
-  expect(menuNav.getAttribute('displayNav')).toBe('N')
+  expect(menuNav.getAttribute('data-display-nav')).toBe('N')
 
   // Click responsive nav button to toggle to 'Y'
   fireEvent.click(menuBars)
-  expect(menuNav.getAttribute('displayNav')).toBe('Y')
+  expect(menuNav.getAttribute('data-display-nav')).toBe('Y')
 
   // Click responsive nav button again to toggle back to 'N'
   fireEvent.click(menuBars)
-  expect(menuNav.getAttribute('displayNav')).toBe('N')
+  expect(menuNav.getAttribute('data-display-nav')).toBe('N')
 })
 
 it('MyMenuHeaders/7 - should pass title to MyMenuTitle', () => {
@@ -176,12 +176,12 @@ it('MyMenuHeaders/9 - should reset displayNav to 0 when header is clicked', () =
 
   // Open responsive nav first (displayNav becomes 1)
   fireEvent.click(menuBars)
-  expect(menuNav.getAttribute('displayNav')).toBe('Y')
+  expect(menuNav.getAttribute('data-display-nav')).toBe('Y')
 
   // Click on a header - this should call setDisplayNav(0)
   fireEvent.click(headerButtons[1])
 
   // displayNav should be reset to 0 (displayed as 'N')
-  expect(menuNav.getAttribute('displayNav')).toBe('N')
+  expect(menuNav.getAttribute('data-display-nav')).toBe('N')
   expect(mockSetDisplayTab).toHaveBeenCalledWith(1)
 })

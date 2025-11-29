@@ -13,7 +13,7 @@ it('MyMenuHeader/1', async () => {
 
   const button = screen.getByRole('button', { name: 'Hello World' })
   expect(button).toHaveClass('MyMenuHeader')
-  expect(button).toHaveAttribute('currentTab', 'Y')
+  expect(button).toHaveAttribute('data-current-tab', 'Y')
   expect(container.firstChild).toMatchSnapshot()
 
   await user.click(button)

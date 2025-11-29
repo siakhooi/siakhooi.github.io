@@ -3,7 +3,7 @@
 exports[`MyMenuHeader/1 1`] = `
 <button
   class="MyMenuHeader"
-  currenttab="Y"
+  data-current-tab="Y"
 >
   Hello World
 </button>

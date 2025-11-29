@@ -8,7 +8,7 @@ it('MyMenuNav/Y', () => {
   )
   const nav = container.querySelector('.MyMenuNav')
   expect(nav).toBeInTheDocument()
-  expect(nav).toHaveAttribute('displaynav', 'Y')
+  expect(nav).toHaveAttribute('data-display-nav', 'Y')
   expect(container.firstChild).toMatchSnapshot()
 })
 
@@ -18,6 +18,6 @@ it('MyMenuNav/N', () => {
   )
   const nav = container.querySelector('.MyMenuNav')
   expect(nav).toBeInTheDocument()
-  expect(nav).toHaveAttribute('displaynav', 'N')
+  expect(nav).toHaveAttribute('data-display-nav', 'N')
   expect(container.firstChild).toMatchSnapshot()
 })

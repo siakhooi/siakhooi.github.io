@@ -12,7 +12,7 @@ button.MyMenuHeader {
   @extend .w3-bar-item;
   @extend .w3-button;
 }
-button.MyMenuHeader[currentTab="Y"] {
+button.MyMenuHeader[data-current-tab="Y"] {
   @extend .w3-theme;
 }
 
@@ -56,12 +56,12 @@ div.MyMenuNav {
     display: block;
   }
 }
-div.MyMenuNav[displayNav="Y"] {
+div.MyMenuNav[data-display-nav="Y"] {
   @media screen and (max-width: 864px) {
     display: block;
   }
 }
-div.MyMenuNav[displayNav="N"] {
+div.MyMenuNav[data-display-nav="N"] {
   @media screen and (max-width: 864px) {
     display: none;
   }

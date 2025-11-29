@@ -9,8 +9,7 @@ MyMenuHeader.propTypes = {
 
 function MyMenuHeader (props) {
   return (
-    // eslint-disable-next-line react/no-unknown-property
-    <button className="MyMenuHeader" currentTab={props.selected} onClick={props.onClick}>{props.name}</button>
+    <button className="MyMenuHeader" data-current-tab={props.selected} onClick={props.onClick}>{props.name}</button>
   )
 }
 export default MyMenuHeader

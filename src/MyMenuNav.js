@@ -8,8 +8,7 @@ MyMenuNav.propTypes = {
 
 function MyMenuNav (props) {
   return (
-    // eslint-disable-next-line react/no-unknown-property
-    <div className="MyMenuNav" displayNav={props.displayNav}>{props.children}</div>
+    <div className="MyMenuNav" data-display-nav={props.displayNav}>{props.children}</div>
   )
 }
 
