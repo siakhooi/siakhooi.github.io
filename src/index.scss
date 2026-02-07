@@ -3,16 +3,28 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f7faf8;
+  color: #3d5245;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 div.MyPageHeader {
   @extend .w3-container;
   width: 100%;
+  background-color: #f7faf8;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 h1.MyPageHeader {
-  @extend .w3-theme-d5;
+  color: #3d5245;
+  background-color: transparent !important;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  border-bottom: 1px solid #c0dac9;
+  padding-bottom: 0.5rem;
   @media screen and (max-width: 300px) {
     font-size: larger;
   }
@@ -22,9 +34,10 @@ h1.MyPageHeader {
 }
 
 div.PageBanner {
-  height: 100px;
+  height: 80px;
   width: 100%;
   position: relative;
+  background-color: #f7faf8;
 }
 div.PagePoweredBy {
   @extend .w3-container;
@@ -32,6 +45,9 @@ div.PagePoweredBy {
   bottom: 0;
   right: 0;
   text-align: right;
+  opacity: 0.6;
+  font-size: 0.85em;
+  color: #6b9179;
 }
 
 div.PagePoweredBy span {
@@ -39,6 +55,34 @@ div.PagePoweredBy span {
 }
 
 div.PagePoweredBy img {
-  height: 30px;
+  height: 24px;
+  opacity: 0.7;
+  filter: grayscale(30%);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+div.PagePoweredBy img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+div.PagePoweredBy a {
+  margin-left: 0.5rem;
+}
+
+.DataSource, .WebCounter {
+  font-size: 0.8em;
+  color: #7da08a;
+}
+
+.DataSource a, .WebCounter a {
+  color: #5a8268;
+  text-decoration: none;
+  border-bottom: 1px dotted #7da08a;
+  transition: border-color 0.3s ease;
+}
+
+.DataSource a:hover, .WebCounter a:hover {
+  border-bottom-color: #3d5245;
 }
 

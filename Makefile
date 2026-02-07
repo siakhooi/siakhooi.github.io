@@ -28,3 +28,6 @@ commit:
 	scripts/git-commit-and-push.sh
 release:
 	scripts/create-release.sh
+
+start:
+	npm start

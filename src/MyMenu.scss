@@ -3,28 +3,44 @@
 
 div.MyMenu {
   @extend .w3-container;
+  padding: 1rem 0;
 }
 div.MyMenuHeaders {
   @extend .w3-container;
-  @extend .w3-theme-d3;
+  background-color: #e8f2eb !important;
+  border-bottom: 1px solid #c0dac9;
 }
 button.MyMenuHeader {
   @extend .w3-bar-item;
   @extend .w3-button;
+  color: #4a7258 !important;
+  background-color: transparent !important;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+button.MyMenuHeader:hover {
+  background-color: rgba(184, 212, 194, 0.3) !important;
 }
 button.MyMenuHeader[data-current-tab="Y"] {
-  @extend .w3-theme;
+  background-color: #f7faf8 !important;
+  color: #3d5245 !important;
+  border-bottom: 2px solid #7da08a;
 }
 
 div.MyMenuBody {
   @extend .w3-container;
   margin: 0px;
+  padding: 1rem;
+  background-color: #f7faf8;
 }
 div.MyMenuGroup {
-  transition: 0.3s;
+  transition: all 0.4s ease;
   display: inline-block;
   vertical-align: top;
-  padding: 4px;
+  padding: 8px;
   @media screen and (max-width: 576px) {
     width: 100%;
   }
@@ -42,16 +58,32 @@ div.MyMenuGroup {
   }
 }
 div.MyMenuGroupCard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px 0 rgba(61, 82, 69, 0.08);
   overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #d4e6da;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+div.MyMenuGroupCard:hover {
+  box-shadow: 0 4px 16px 0 rgba(61, 82, 69, 0.12);
+  transform: translateY(-2px);
 }
 
 h2.MyMenuGroupHeader {
   @extend .w3-bar;
-  @extend .w3-theme;
+  background-color: #e8f2eb !important;
+  color: #3d5245 !important;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1rem !important;
+  margin: 0;
+  border-bottom: 1px solid #c0dac9;
 }
 div.MyMenuNav {
   @extend .w3-bar;
+  padding: 0.5rem 0;
   @media screen and (min-width: 864px) {
     display: block;
   }
@@ -77,6 +109,9 @@ div.MyMenuResponsiveNav {
 span.MyMenuTitle {
   @extend .w3-bar-item;
   @extend .w3-btn;
+  color: #4a7258 !important;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 span.MyMenuTitle:hover {
   box-shadow: none;
@@ -88,4 +123,39 @@ span.MyMenuTitle:hover {
   @extend .w3-btn;
   float: right;
   cursor: pointer;
+  color: #5a8268 !important;
+  transition: color 0.3s ease;
+}
+.MyMenuBars:hover {
+  color: #3d5245 !important;
+}
+
+/* Link styling for zen feel */
+li.MyLink {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border-bottom: 1px solid #e8f2eb;
+  transition: background-color 0.3s ease;
+}
+li.MyLink:last-child {
+  border-bottom: none;
+}
+li.MyLink:hover {
+  background-color: #f7faf8;
+}
+
+a.MyLink {
+  color: #4a7258;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+a.MyLink:hover {
+  color: #3d5245;
+}
+
+ul.MyLinkGroup {
+  margin: 0;
+  padding: 0;
 }
